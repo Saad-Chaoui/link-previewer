@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Previewer Debug Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .link-container {
+            margin: 15px 0;
+        }
+        a {
+            display: inline-block;
+            margin: 5px 0;
+            color: #0066cc;
+            text-decoration: none;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        a:hover {
+            background-color: #f5f5f5;
+        }
+        .description {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .debug-panel {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-left: 4px solid #0066cc;
+            margin-top: 20px;
+        }
+        code {
+            background-color: #f1f1f1;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Link Previewer Debug Page</h1>
+    <p>This page contains various types of links to test the Link Previewer extension. Hover over the links to see if the previews work correctly.</p>
+    
+    <div class="debug-panel">
+        <p>If previews aren't working, check the browser console (F12) for debug logs from the extension.</p>
+        <p>Make sure the extension is properly installed and enabled in Chrome.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Popular Websites</h2>
+        <div class="description">Links to popular websites that should work with most preview methods</div>
+        <div class="link-container">
+            <a href="https://www.google.com">Google</a> - 
+            <a href="https://www.wikipedia.org">Wikipedia</a> - 
+            <a href="https://www.github.com">GitHub</a> - 
+            <a href="https://www.nytimes.com">New York Times</a> - 
+            <a href="https://www.bbc.com">BBC</a>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Media Links</h2>
+        <div class="description">Links to images, PDFs, and videos</div>
+        <div class="link-container">
+            <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Sunflower_from_Silesia2.jpg/1280px-Sunflower_from_Silesia2.jpg">Image: Sunflower</a> - 
+            <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">PDF: Sample Document</a> - 
+            <a href="https://file-examples.com/storage/fe7bcdfe8f64f1129739d2d/2017/04/file_example_MP4_480_1_5MG.mp4">Video: Sample MP4</a>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Known CORS Challenges</h2>
+        <div class="description">Links to sites that might have CORS restrictions</div>
+        <div class="link-container">
+            <a href="https://twitter.com">Twitter</a> - 
+            <a href="https://www.instagram.com">Instagram</a> - 
+            <a href="https://www.reddit.com">Reddit</a>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Complex URLs</h2>
+        <div class="description">URLs with query parameters and fragments</div>
+        <div class="link-container">
+            <a href="https://www.google.com/search?q=chrome+extensions&oq=chrome+extensions">Google Search</a> - 
+            <a href="https://en.wikipedia.org/wiki/Chrome#History">Wikipedia with Fragment</a> - 
+            <a href="https://github.com/search?q=javascript&type=repositories">GitHub Search</a>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Current Page Elements</h2>
+        <div class="description">Links to elements on this page</div>
+        <div class="link-container">
+            <a href="#top">Top of Page</a> - 
+            <a href="#" onclick="alert('Internal link clicked!'); return false;">JavaScript Link</a> - 
+            <a href="mailto:example@example.com">Email Link</a>
+        </div>
+    </div>
+    
+    <script>
+        console.log('Link Previewer Debug Page Loaded');
+        console.log('Hover over links to test the extension functionality');
+    </script>
+</body>
+</html> 

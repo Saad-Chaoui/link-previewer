@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Previewer</title>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="../icons/icon48.png" alt="Link Previewer" class="logo">
+      <h1>Link Previewer</h1>
+    </div>
+    
+    <div class="content">
+      <p>Hover over links to see beautiful previews without clicking.</p>
+      
+      <div class="settings">
+        <h2>Settings</h2>
+        <div class="setting-item">
+          <label for="enabled-toggle">
+            <i class="fas fa-toggle-on"></i> Enable Previews
+          </label>
+          <label class="switch">
+            <input type="checkbox" id="enabled-toggle" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+        
+        <div class="setting-item">
+          <label for="delay-slider">
+            <i class="fas fa-clock"></i> Hover Delay
+          </label>
+          <div class="slider-container">
+            <input type="range" id="delay-slider" min="100" max="1000" step="100" value="500">
+            <span id="delay-value">500ms</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>Link Previewer v1.0.0 • Modern & Beautiful</p>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html> 
